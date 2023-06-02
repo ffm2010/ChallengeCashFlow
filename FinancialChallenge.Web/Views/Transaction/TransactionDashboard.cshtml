@@ -1,0 +1,49 @@
+﻿@model IEnumerable<FinancialChallenge.Web.Models.TransactionDto>
+
+<br />
+<br />
+<div class="container p-4 border">
+    <div class="row pb-2">
+        <div class="col">
+            <h1 class="text-primary">Dashboard Cash Flow</h1>
+        </div>
+        @if (User.Identity.IsAuthenticated)
+        {
+
+
+            <div class="col-3 text-end pt-1">
+                <form asp-controller="Transaction" asp-action="TransactionDashboard" method="post">
+                    <label style="float:left; margin-right:10px;margin-top:6px;">Date: </label>
+                    <input style="float:left; margin-right:10px; width:175px;" class="form-control" type="date" name="date" />
+                    <button class="btn btn-outline-primary" type="submit">Filter</button>
+                </form>
+            </div>
+        }
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Transaction Type</th>
+                <th>Description</th>
+                <th>TypePayment</th>
+                <th>Amount Parcels</th>
+                <th>Total</th>
+                <th>TransactionDate</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.TransactionType</td>
+                    <td>@item.Description</td>
+                    <td>@item.TypePayment</td>
+                    <td>@item.AmountParcels</td>
+                    <td>@((item.Total).ToString("c"))</td>
+                    <td>@item.TransactionDate.ToString("d")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="col-10"> <b>Total Cash Flow: @((ViewBag.TotalCashFlow).ToString("c"))</b> </div>
+</div>

@@ -1,0 +1,62 @@
+﻿@model FinancialChallenge.Web.Models.TransactionDto
+@using FinancialChallenge.Web.Models.Enums;
+
+<form asp-action="TransactionDelete">
+    <input asp-for="TransactionId" hidden />
+    <br />
+    <div class="container border p-3">
+        <h1 class="text-primary">Delete Transaction</h1>
+
+        <hr />
+        <div class="row">
+            <div class="col-2">
+                <label asp-for="TransactionType" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pb-3">
+                <select class="form-control" asp-for="TransactionType" asp-items="@Html.GetEnumSelectList<TransactionType>()" disabled></select>
+            </div>
+            <div class="col-2">
+                <label asp-for="Description" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pb-3">
+                <textarea asp-for="Description" class="form-control" rows="5" disabled></textarea>
+            </div>
+            <div class="col-2">
+                <label asp-for="TypePayment" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pb-3">
+                <select class="form-control" asp-for="TypePayment" asp-items="@Html.GetEnumSelectList<TypePayment>()" disabled></select>
+            </div>
+            <div class="col-2">
+                <label asp-for="AmountParcels" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="AmountParcels" class="form-control" disabled />
+            </div>
+            <div class="col-2">
+                <label asp-for="Total" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="Total" class="form-control" type="number" disabled />
+            </div>
+            <div class="col-2">
+                <label asp-for="TransactionDate" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="TransactionDate" class="form-control" type="date" disabled />
+            </div>
+            <div class="col-5 offset-2">
+                <a asp-action="TransactionIndex" class="btn-primary btn form-control ">Back to List</a>
+            </div>
+            <div class="col-5">
+                <input type="submit" value="Delete" class="btn btn-danger form-control" />
+            </div>
+        </div>
+        <div>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
