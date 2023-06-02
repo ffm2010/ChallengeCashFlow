@@ -1,9 +1,13 @@
 # Challenge Cash Flow
 Veja a visão geral de **implementações em microsserviços com ferramentas .net** no desafio **Fluxo de Caixa**
 
+![Microservice Architecture Challenge](https://github.com/ffm2010/ChallengeCashFlow/assets/12517014/c1a74b64-27ee-444c-bdc8-9ab117c3d8c6)
 
 
+![Component Diagram Challenge](https://github.com/ffm2010/ChallengeCashFlow/assets/12517014/9ecfd37d-396f-40f7-97b7-bcc6fe0c5347)
 
+
+![Cash Flow Context Diagram](https://github.com/ffm2010/ChallengeCashFlow/assets/12517014/21eac0b4-f6a9-477e-89b1-5a46fa9c6179)
 
 
 ### Microsserviço de CashFlowApi que inclui;
