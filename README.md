@@ -32,10 +32,10 @@ Veja a visão geral de **implementações em microsserviços com ferramentas .ne
 #### Microsserviço Ocelot Gateway de API
 * Implementar **Gateway de API com Ocelot**
 * Exemplos de microsserviços para redirecionar por meio dos API Gateways
-* Execute vários tipos diferentes de contêiner **API Gateway **
+* Execute vários tipos diferentes de contêiner **API Gateway**
 
 #### Implementações de Microsserviços
-* Implementação de rastreabilidade utilizando ** SeriLog e NLog** para microsserviços
+* Implementação de rastreabilidade utilizando **SeriLog e NLog** para microsserviços
 
 #### Implementações de resiliência de microsserviços
 * Tornando os microsserviços mais **resilientes usando IHttpClientFactory** para implementar solicitações HTTP resilientes
